@@ -1,0 +1,13 @@
+version: '3'
+services:
+  app:
+    build: .
+    ports:
+      - "8090:8090"
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: ecommerce
+    ports:
+      - "3306:3306"
